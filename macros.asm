@@ -12,14 +12,6 @@
     ecall
 .end_macro
 
-#Макрос для переноса строки
-.macro NEW_LINE
-    li a7, 4				# syscall: print string
-    la a0, new_line
-    ecall
-.end_macro
-
-
 #Макрос для выхода из программы
 .macro EXIT_PROGRAM
 	li a7, 10   # 10 — код системного вызова "exit"
